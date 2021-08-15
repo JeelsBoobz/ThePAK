@@ -14,7 +14,7 @@ if [[ -d "output" ]]
 fi
 
 unpacking () {
-  qemu-i386 $PREFIX/share/quickbms/quickbms -Q etc/tools.bms $opt output
+  qemu-i386 $PREFIX/share/quickbms/quickbms -o etc/tools.bms $opt output
 }
 
 repacking () {
@@ -71,7 +71,7 @@ do
             ;;
         "Repack")
             repack
-            
+            break
             ;;
         "Quit")
             break
